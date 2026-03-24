@@ -207,10 +207,10 @@ export default function AmenitiesPage() {
       </section>
 
       <CTABanner
-        title="Come see it for yourself."
-        subtitle="Book a private tour and experience the quality of Vivo in person."
-        primaryLabel="Book a Tour"
-        primaryHref="/contact"
+        title="Opening Summer 2026."
+        subtitle="Register your interest today and be first to access suites when we open."
+        primaryLabel="Register Now"
+        primaryHref="/register"
         secondaryLabel="View Floor Plans"
         secondaryHref="/floor-plans"
       />

@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RegisterPopup from "@/components/RegisterPopup";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <RegisterPopup />
       </body>
     </html>
   );

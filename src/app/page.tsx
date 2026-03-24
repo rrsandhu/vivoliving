@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, floorPlans, amenities } from "@/lib/data";
 import CTABanner from "@/components/CTABanner";
 
@@ -47,21 +48,30 @@ export default function HomePage() {
       <section
         style={{
           position: "relative",
-          minHeight: "100vh",
+          height: "82vh",
+          maxHeight: "900px",
+          minHeight: "600px",
           display: "flex",
           alignItems: "flex-end",
           backgroundColor: "#0F1A25",
           overflow: "hidden",
         }}
       >
-        {/* Background gradient */}
+        {/* Hero image */}
+        <Image
+          src="/images/hero1.png"
+          alt="Vivo — Surrey City Centre"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "center 30%" }}
+        />
+        {/* Overlay */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background:
-              "linear-gradient(135deg, #0F1A25 0%, #1C3144 50%, #0F1A25 100%)",
-            opacity: 0.95,
+            background: "linear-gradient(to bottom, rgba(15,26,37,0.25) 0%, rgba(15,26,37,0.5) 55%, rgba(15,26,37,0.88) 100%)",
           }}
         />
 
@@ -114,8 +124,8 @@ export default function HomePage() {
             <Link href="/floor-plans" className="btn-primary">
               View Availability
             </Link>
-            <Link href="/contact" className="btn-outline">
-              Book a Tour
+            <Link href="/register" className="btn-outline">
+              Register Now
             </Link>
           </div>
         </div>
@@ -233,35 +243,13 @@ export default function HomePage() {
               </Link>
             </div>
             <div style={{ position: "relative" }}>
-              <div
-                style={{
-                  aspectRatio: "4/5",
-                  backgroundColor: "#1C3144",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    textAlign: "center",
-                    color: "rgba(255,255,255,0.3)",
-                    padding: "2rem",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontFamily: "var(--font-cormorant), Georgia, serif",
-                      fontSize: "1.5rem",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    Building Image
-                  </p>
-                  <p style={{ fontSize: "0.875rem" }}>
-                    Replace with exterior or lifestyle photo
-                  </p>
-                </div>
+              <div style={{ aspectRatio: "4/5", position: "relative", overflow: "hidden" }}>
+                <Image
+                  src="/images/building2.png"
+                  alt="Vivo building exterior"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
               </div>
               <div
                 style={{
@@ -675,8 +663,8 @@ export default function HomePage() {
         subtitle="Our leasing team is ready to help you find the right suite. Schedule a private tour and see it for yourself."
         primaryLabel="View Available Suites"
         primaryHref="/floor-plans"
-        secondaryLabel="Book a Tour"
-        secondaryHref="/contact"
+        secondaryLabel="Register Now"
+        secondaryHref="/register"
       />
     </>
   );

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
+const navLinks: { href: string; label: string; highlight?: boolean }[] = [
   { href: "/", label: "Home" },
   { href: "/floor-plans", label: "Floor Plans" },
   { href: "/amenities", label: "Amenities" },
@@ -59,39 +59,62 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                style={{
-                  fontSize: "0.75rem",
-                  fontFamily: "var(--font-inter), system-ui, sans-serif",
-                  fontWeight: 500,
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  textDecoration: "none",
-                  color: pathname === link.href ? "#C9A96E" : textColor,
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A96E")}
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.color =
-                    pathname === link.href ? "#C9A96E" : textColor)
-                }
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.highlight ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  style={{
+                    fontSize: "0.7rem",
+                    fontFamily: "var(--font-inter), system-ui, sans-serif",
+                    fontWeight: 600,
+                    letterSpacing: "0.2em",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    backgroundColor: "#C9A96E",
+                    color: "white",
+                    padding: "0.5rem 1rem",
+                    transition: "background-color 0.2s",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#1C3144")}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#C9A96E")}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  style={{
+                    fontSize: "0.75rem",
+                    fontFamily: "var(--font-inter), system-ui, sans-serif",
+                    fontWeight: 500,
+                    letterSpacing: "0.2em",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    color: pathname === link.href ? "#C9A96E" : textColor,
+                    transition: "color 0.2s",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A96E")}
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color =
+                      pathname === link.href ? "#C9A96E" : textColor)
+                  }
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* CTA */}
           <div className="hidden lg:block">
             <Link
-              href="/contact"
+              href="/register"
               className="btn-primary"
               style={{ fontSize: "0.75rem", padding: "0.75rem 1.5rem" }}
             >
-              Book a Tour
+              Register Now
             </Link>
           </div>
 
@@ -157,12 +180,12 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/register"
               className="btn-primary self-start mt-2"
               style={{ fontSize: "0.75rem", padding: "0.75rem 1.5rem" }}
               onClick={() => setMenuOpen(false)}
             >
-              Book a Tour
+              Register Now
             </Link>
           </nav>
         </div>

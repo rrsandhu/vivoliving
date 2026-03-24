@@ -175,8 +175,8 @@ export default function NeighbourhoodPage() {
       <CTABanner
         title="Love the neighbourhood?"
         subtitle="You'll love living here even more. Book a tour and see your new home in context."
-        primaryLabel="Book a Tour"
-        primaryHref="/contact"
+        primaryLabel="Register Now"
+        primaryHref="/register"
         secondaryLabel="View Suites"
         secondaryHref="/floor-plans"
       />

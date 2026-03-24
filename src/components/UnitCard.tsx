@@ -166,11 +166,11 @@ export default function UnitCard({ unit }: { unit: Unit }) {
             Inquire
           </Link>
           <Link
-            href={`/contact?unit=${unit.id}&tour=true`}
+            href="/register"
             className="btn-outline-dark"
             style={{ flex: 1, fontSize: "0.75rem", padding: "0.75rem 1rem", justifyContent: "center" }}
           >
-            Book Tour
+            Register
           </Link>
         </div>
       </div>

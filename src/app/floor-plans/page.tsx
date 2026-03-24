@@ -146,8 +146,8 @@ export default function FloorPlansPage() {
         subtitle="Our leasing team can help you find the perfect suite and answer any questions about availability."
         primaryLabel="Contact Leasing"
         primaryHref="/contact"
-        secondaryLabel="Book a Tour"
-        secondaryHref="/contact"
+        secondaryLabel="Register Now"
+        secondaryHref="/register"
       />
     </>
   );

@@ -123,18 +123,18 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Book a Tour */}
+          {/* Register */}
           <div>
-            <p className="section-label mb-5">Ready to Move?</p>
+            <p className="section-label mb-5">Opening Summer 2026</p>
             <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", marginBottom: "1.25rem" }}>
-              Schedule a private tour of your new home today.
+              Register your interest today for priority access to suites and leasing updates.
             </p>
             <Link
-              href="/contact"
+              href="/register"
               className="btn-outline"
               style={{ fontSize: "0.75rem", padding: "0.75rem 1.5rem", display: "inline-flex" }}
             >
-              Book a Tour
+              Register Now
             </Link>
           </div>
         </div>

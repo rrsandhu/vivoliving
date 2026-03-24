@@ -11,11 +11,11 @@ interface CTABannerProps {
 
 export default function CTABanner({
   title = "Your New Home is Waiting",
-  subtitle = "Explore available suites and book a private tour with our leasing team.",
+  subtitle = "Register your interest today and get priority access to suites and leasing updates.",
   primaryLabel = "View Availability",
   primaryHref = "/floor-plans",
-  secondaryLabel = "Contact Leasing",
-  secondaryHref = "/contact",
+  secondaryLabel = "Register Now",
+  secondaryHref = "/register",
 }: CTABannerProps) {
   return (
     <section style={{ backgroundColor: "#1C3144", paddingTop: "5rem", paddingBottom: "5rem" }}>
