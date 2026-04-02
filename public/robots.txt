@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block admin endpoints
+Disallow: /api/register
+
+Sitemap: https://vivoliving.ca/sitemap.xml
