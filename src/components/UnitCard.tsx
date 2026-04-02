@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { floorPlans } from "@/lib/data";
 
 type Unit = (typeof floorPlans)[number];
@@ -31,29 +32,13 @@ export default function UnitCard({ unit }: { unit: Unit }) {
           justifyContent: "center",
         }}
       >
-        <div style={{ textAlign: "center" }}>
-          <p
-            style={{
-              fontFamily: "var(--font-cormorant), Georgia, serif",
-              fontSize: "2rem",
-              color: "#1C3144",
-            }}
-          >
-            {unit.sqft}
-            <span style={{ fontSize: "1rem", color: "#6B7280" }}> sq ft</span>
-          </p>
-          <p
-            style={{
-              fontSize: "0.7rem",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "#6B7280",
-              marginTop: "0.25rem",
-            }}
-          >
-            {unit.sqftInterior} interior · {unit.sqftExterior} exterior
-          </p>
-        </div>
+        <Image
+          src={unit.image}
+          alt={`${unit.name} floor plan`}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          style={{ objectFit: "contain", padding: "0.5rem" }}
+        />
 
         {/* PDF download button */}
         <a

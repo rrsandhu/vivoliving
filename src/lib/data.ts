@@ -25,6 +25,7 @@ export const siteConfig = {
   },
 };
 
+// Image previews generated from PDFs — regenerate with: node scripts/pdf-to-images.mjs
 export const floorPlans = [
   // ── Studios ──────────────────────────────────────────────────────
   {
@@ -37,6 +38,7 @@ export const floorPlans = [
     sqftExterior: 62,
     sqft: 478,
     pdf: "/unit/STUDIO-A.pdf",
+    image: "/unit/images/STUDIO-A.png",
     features: ["Balcony", "In-suite Laundry", "Open Layout"],
   },
   {
@@ -49,6 +51,7 @@ export const floorPlans = [
     sqftExterior: 91,
     sqft: 437,
     pdf: "/unit/STUDIO-B.pdf",
+    image: "/unit/images/STUDIO-B.png",
     features: ["Balcony", "In-suite Laundry", "Open Layout"],
   },
 
@@ -63,6 +66,7 @@ export const floorPlans = [
     sqftExterior: 61,
     sqft: 554,
     pdf: "/unit/1B-E1.pdf",
+    image: "/unit/images/1B-E1.png",
     features: ["Balcony", "In-suite Laundry"],
   },
   {
@@ -75,6 +79,7 @@ export const floorPlans = [
     sqftExterior: 60,
     sqft: 580,
     pdf: "/unit/1B-E2.pdf",
+    image: "/unit/images/1B-E2.png",
     features: ["Balcony", "In-suite Laundry"],
   },
   {
@@ -87,6 +92,7 @@ export const floorPlans = [
     sqftExterior: 90,
     sqft: 671,
     pdf: "/unit/1B-F.pdf",
+    image: "/unit/images/1B-F.png",
     features: ["Balcony", "In-suite Laundry"],
   },
   {
@@ -99,6 +105,7 @@ export const floorPlans = [
     sqftExterior: 92,
     sqft: 706,
     pdf: "/unit/1B-G1.pdf",
+    image: "/unit/images/1B-G1.png",
     features: ["Balcony", "In-suite Laundry"],
   },
   {
@@ -111,6 +118,7 @@ export const floorPlans = [
     sqftExterior: 64,
     sqft: 574,
     pdf: "/unit/1B-H1.pdf",
+    image: "/unit/images/1B-H1.png",
     features: ["Balcony", "In-suite Laundry"],
   },
   {
@@ -123,6 +131,7 @@ export const floorPlans = [
     sqftExterior: 92,
     sqft: 532,
     pdf: "/unit/1B-X.pdf",
+    image: "/unit/images/1B-X.png",
     features: ["Balcony", "In-suite Laundry"],
   },
   {
@@ -135,6 +144,7 @@ export const floorPlans = [
     sqftExterior: 154,
     sqft: 725,
     pdf: "/unit/1B-Y.pdf",
+    image: "/unit/images/1B-Y.png",
     features: ["Large Balcony", "In-suite Laundry"],
   },
 
@@ -149,6 +159,7 @@ export const floorPlans = [
     sqftExterior: 52,
     sqft: 643,
     pdf: "/unit/1BD-C1.pdf",
+    image: "/unit/images/1BD-C1.png",
     features: ["Balcony", "Den", "In-suite Laundry"],
   },
   {
@@ -161,6 +172,7 @@ export const floorPlans = [
     sqftExterior: 51,
     sqft: 594,
     pdf: "/unit/1BD-C2.pdf",
+    image: "/unit/images/1BD-C2.png",
     features: ["Balcony", "Den", "In-suite Laundry"],
   },
   {
@@ -173,6 +185,7 @@ export const floorPlans = [
     sqftExterior: 93,
     sqft: 683,
     pdf: "/unit/1BD-G2.pdf",
+    image: "/unit/images/1BD-G2.png",
     features: ["Balcony", "Den", "In-suite Laundry"],
   },
   {
@@ -185,6 +198,7 @@ export const floorPlans = [
     sqftExterior: 51,
     sqft: 751,
     pdf: "/unit/1BD-K.pdf",
+    image: "/unit/images/1BD-K.png",
     features: ["Balcony", "Den", "In-suite Laundry", "Accessible Unit"],
   },
 
@@ -199,6 +213,7 @@ export const floorPlans = [
     sqftExterior: 97,
     sqft: 878,
     pdf: "/unit/2B-M1-M2.pdf",
+    image: "/unit/images/2B-M1-M2.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -211,6 +226,7 @@ export const floorPlans = [
     sqftExterior: 52,
     sqft: 871,
     pdf: "/unit/2B-M3.pdf",
+    image: "/unit/images/2B-M3.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -223,6 +239,7 @@ export const floorPlans = [
     sqftExterior: 58,
     sqft: 733,
     pdf: "/unit/2B-N.pdf",
+    image: "/unit/images/2B-N.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -235,6 +252,7 @@ export const floorPlans = [
     sqftExterior: 66,
     sqft: 858,
     pdf: "/unit/2B-O.pdf",
+    image: "/unit/images/2B-O.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -247,6 +265,7 @@ export const floorPlans = [
     sqftExterior: 56,
     sqft: 763,
     pdf: "/unit/2B-P.pdf",
+    image: "/unit/images/2B-P.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -259,6 +278,7 @@ export const floorPlans = [
     sqftExterior: 62,
     sqft: 802,
     pdf: "/unit/2B-Q.pdf",
+    image: "/unit/images/2B-Q.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -271,6 +291,7 @@ export const floorPlans = [
     sqftExterior: 71,
     sqft: 813,
     pdf: "/unit/2B-R1.pdf",
+    image: "/unit/images/2B-R1.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -283,6 +304,7 @@ export const floorPlans = [
     sqftExterior: 71,
     sqft: 816,
     pdf: "/unit/2B-S.pdf",
+    image: "/unit/images/2B-S.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -295,6 +317,7 @@ export const floorPlans = [
     sqftExterior: 93,
     sqft: 903,
     pdf: "/unit/2B-U.pdf",
+    image: "/unit/images/2B-U.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
 
@@ -309,6 +332,7 @@ export const floorPlans = [
     sqftExterior: 53,
     sqft: 1139,
     pdf: "/unit/2BD-D.pdf",
+    image: "/unit/images/2BD-D.png",
     features: ["Balcony", "Den", "In-suite Laundry", "2 Full Baths", "Accessible Unit"],
   },
   {
@@ -321,6 +345,7 @@ export const floorPlans = [
     sqftExterior: 139,
     sqft: 1029,
     pdf: "/unit/2BD-T1.pdf",
+    image: "/unit/images/2BD-T1.png",
     features: ["Large Balcony", "Den", "In-suite Laundry", "2 Full Baths"],
   },
   {
@@ -333,6 +358,7 @@ export const floorPlans = [
     sqftExterior: 60,
     sqft: 943,
     pdf: "/unit/2BD-T2.pdf",
+    image: "/unit/images/2BD-T2.png",
     features: ["Balcony", "Den", "In-suite Laundry", "2 Full Baths"],
   },
 
@@ -347,6 +373,7 @@ export const floorPlans = [
     sqftExterior: 76,
     sqft: 999,
     pdf: "/unit/3B-W.pdf",
+    image: "/unit/images/3B-W.png",
     features: ["Balcony", "In-suite Laundry", "2 Full Baths"],
   },
 ];
