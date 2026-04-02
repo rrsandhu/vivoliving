@@ -1,22 +1,27 @@
 "use client";
 
+import {
+  Dumbbell, Sofa, Sun, ShieldCheck, Bike, Car, Heart, Package,
+  WashingMachine, ChefHat, Sparkles, Wind, Thermometer,
+} from "lucide-react";
 import { amenities } from "@/lib/data";
 import CTABanner from "@/components/CTABanner";
+import type { LucideIcon } from "lucide-react";
 
-const iconMap: Record<string, string> = {
-  dumbbell: "◈",
-  sofa: "◉",
-  sun: "◎",
-  shield: "◆",
-  bicycle: "◇",
-  car: "▣",
-  heart: "♡",
-  package: "▤",
-  "washing-machine": "◈",
-  "chef-hat": "◎",
-  sparkles: "✦",
-  wind: "◌",
-  thermometer: "◉",
+const iconMap: Record<string, LucideIcon> = {
+  dumbbell: Dumbbell,
+  sofa: Sofa,
+  sun: Sun,
+  shield: ShieldCheck,
+  bicycle: Bike,
+  car: Car,
+  heart: Heart,
+  package: Package,
+  "washing-machine": WashingMachine,
+  "chef-hat": ChefHat,
+  sparkles: Sparkles,
+  wind: Wind,
+  thermometer: Thermometer,
 };
 
 export default function AmenitiesPage() {
@@ -98,7 +103,7 @@ export default function AmenitiesPage() {
                     transition: "all 0.3s",
                   }}
                 >
-                  {iconMap[a.icon] || "○"}
+                  {(() => { const Icon = iconMap[a.icon]; return Icon ? <Icon size={22} strokeWidth={1.5} /> : null; })()}
                 </div>
                 <h3
                   style={{
@@ -158,7 +163,7 @@ export default function AmenitiesPage() {
                     flexShrink: 0,
                   }}
                 >
-                  {iconMap[a.icon] || "○"}
+                  {(() => { const Icon = iconMap[a.icon]; return Icon ? <Icon size={20} strokeWidth={1.5} /> : null; })()}
                 </div>
                 <div>
                   <h3
