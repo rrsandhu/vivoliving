@@ -5,15 +5,13 @@ import { floorPlans } from "@/lib/data";
 import UnitCard from "@/components/UnitCard";
 import CTABanner from "@/components/CTABanner";
 
-const types = ["All", "1 Bed", "2 Bed", "3 Bed"];
+const types = ["All", "Studio", "1 Bed", "1 Bed + Den", "2 Bed", "2 Bed + Den", "3 Bed"];
 
 export default function FloorPlansPage() {
   const [activeType, setActiveType] = useState("All");
-  const [availableOnly, setAvailableOnly] = useState(false);
 
   const filtered = floorPlans.filter((u) => {
     if (activeType !== "All" && u.type !== activeType) return false;
-    if (availableOnly && !u.available) return false;
     return true;
   });
 
@@ -79,25 +77,6 @@ export default function FloorPlansPage() {
               </button>
             ))}
           </div>
-          <label
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              fontSize: "0.875rem",
-              color: "#6B7280",
-              cursor: "pointer",
-              userSelect: "none",
-            }}
-          >
-            <input
-              type="checkbox"
-              checked={availableOnly}
-              onChange={(e) => setAvailableOnly(e.target.checked)}
-              style={{ width: "1rem", height: "1rem", accentColor: "#C9A96E" }}
-            />
-            Available now only
-          </label>
         </div>
       </section>
 

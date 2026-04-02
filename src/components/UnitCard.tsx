@@ -4,6 +4,9 @@ import type { floorPlans } from "@/lib/data";
 type Unit = (typeof floorPlans)[number];
 
 export default function UnitCard({ unit }: { unit: Unit }) {
+  const bedroomLabel =
+    unit.bedrooms === 0 ? "Studio" : `${unit.bedrooms} Bed`;
+
   return (
     <div
       style={{
@@ -13,14 +16,10 @@ export default function UnitCard({ unit }: { unit: Unit }) {
         flexDirection: "column",
         transition: "border-color 0.3s",
       }}
-      onMouseEnter={(e) =>
-        (e.currentTarget.style.borderColor = "#C9A96E")
-      }
-      onMouseLeave={(e) =>
-        (e.currentTarget.style.borderColor = "#E5E1DB")
-      }
+      onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#C9A96E")}
+      onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#E5E1DB")}
     >
-      {/* Floor plan image placeholder */}
+      {/* Floor plan area */}
       <div
         style={{
           position: "relative",
@@ -36,42 +35,50 @@ export default function UnitCard({ unit }: { unit: Unit }) {
           <p
             style={{
               fontFamily: "var(--font-cormorant), Georgia, serif",
-              fontSize: "1.5rem",
-              color: "#6B7280",
+              fontSize: "2rem",
+              color: "#1C3144",
             }}
           >
-            {unit.sqft} sq ft
+            {unit.sqft}
+            <span style={{ fontSize: "1rem", color: "#6B7280" }}> sq ft</span>
           </p>
           <p
             style={{
-              fontSize: "0.75rem",
+              fontSize: "0.7rem",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "rgba(107,114,128,0.6)",
+              color: "#6B7280",
               marginTop: "0.25rem",
             }}
           >
-            Floor Plan
+            {unit.sqftInterior} interior · {unit.sqftExterior} exterior
           </p>
         </div>
-        <div
+
+        {/* PDF download button */}
+        <a
+          href={unit.pdf}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             position: "absolute",
-            top: "0.75rem",
-            left: "0.75rem",
-            fontSize: "0.75rem",
-            fontFamily: "var(--font-inter), system-ui, sans-serif",
+            bottom: "0.75rem",
+            right: "0.75rem",
+            fontSize: "0.65rem",
             fontWeight: 600,
-            letterSpacing: "0.1em",
+            letterSpacing: "0.15em",
             textTransform: "uppercase",
             padding: "0.375rem 0.75rem",
-            backgroundColor: unit.available ? "#f0fdf4" : "#F7F5F2",
-            color: unit.available ? "#15803d" : "#6B7280",
-            border: `1px solid ${unit.available ? "#bbf7d0" : "#E5E1DB"}`,
+            backgroundColor: "#1C3144",
+            color: "white",
+            textDecoration: "none",
+            transition: "background-color 0.2s",
           }}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#C9A96E")}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#1C3144")}
         >
-          {unit.available ? `Available ${unit.availableDate}` : `Available ${unit.availableDate}`}
-        </div>
+          View Plan ↓
+        </a>
       </div>
 
       {/* Content */}
@@ -109,14 +116,15 @@ export default function UnitCard({ unit }: { unit: Unit }) {
           <div style={{ textAlign: "right" }}>
             <p
               style={{
-                fontFamily: "var(--font-cormorant), Georgia, serif",
-                fontSize: "1.25rem",
-                color: "#1C3144",
+                fontSize: "0.75rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "#C9A96E",
+                fontWeight: 600,
               }}
             >
-              From ${unit.startingRent.toLocaleString()}
+              Contact for Pricing
             </p>
-            <p style={{ fontSize: "0.75rem", color: "#6B7280" }}>/month</p>
           </div>
         </div>
 
@@ -133,7 +141,7 @@ export default function UnitCard({ unit }: { unit: Unit }) {
             paddingBottom: "0.75rem",
           }}
         >
-          <span>{unit.bedrooms} bed</span>
+          <span>{bedroomLabel}</span>
           <span style={{ color: "#E5E1DB" }}>|</span>
           <span>{unit.bathrooms} bath</span>
           <span style={{ color: "#E5E1DB" }}>|</span>
