@@ -319,18 +319,7 @@ export default function HomePage() {
                 <p className="section-label mb-3">{u.type}</p>
                 <p
                   style={{
-                    fontFamily: "var(--font-cormorant), Georgia, serif",
-                    fontSize: "2.25rem",
-                    fontWeight: 300,
-                    color: "#0F1A25",
-                    marginBottom: "0.25rem",
-                  }}
-                >
-                  {u.from}
-                </p>
-                <p
-                  style={{
-                    fontSize: "0.75rem",
+                    fontSize: "0.875rem",
                     color: "#6B7280",
                     marginBottom: "1rem",
                   }}
