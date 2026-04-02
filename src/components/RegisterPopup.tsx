@@ -31,10 +31,11 @@ export default function RegisterPopup() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "1.5rem",
+        padding: "1rem",
         backgroundColor: "rgba(15,26,37,0.7)",
         backdropFilter: "blur(4px)",
         animation: "fadeIn 0.3s ease-out",
+        overflowY: "auto",
       }}
       onClick={dismiss}
     >
@@ -45,6 +46,8 @@ export default function RegisterPopup() {
           width: "100%",
           position: "relative",
           animation: "fadeUp 0.4s ease-out",
+          maxHeight: "calc(100dvh - 2rem)",
+          overflowY: "auto",
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -71,7 +74,7 @@ export default function RegisterPopup() {
           ×
         </button>
 
-        <div style={{ padding: "2.5rem" }}>
+        <div style={{ padding: "clamp(1.25rem, 5vw, 2.5rem)" }}>
           {/* Label */}
           <p
             style={{
@@ -91,7 +94,7 @@ export default function RegisterPopup() {
           <h2
             style={{
               fontFamily: "var(--font-cormorant), Georgia, serif",
-              fontSize: "2rem",
+              fontSize: "clamp(1.5rem, 5vw, 2rem)",
               fontWeight: 300,
               color: "#0F1A25",
               lineHeight: 1.15,

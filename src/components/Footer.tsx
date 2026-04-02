@@ -150,7 +150,7 @@ export default function Footer() {
           <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>
             © {new Date().getFullYear()} Vivo. A West Fraser Property. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-6">
             {["Privacy Policy", "Terms of Use", "Fair Housing"].map((item) => (
               <a
                 key={item}

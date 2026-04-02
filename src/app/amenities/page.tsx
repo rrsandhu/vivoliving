@@ -23,7 +23,7 @@ export default function AmenitiesPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ paddingTop: "10rem", paddingBottom: "4rem", backgroundColor: "#0F1A25" }}>
+      <section style={{ paddingTop: "clamp(6rem, 12vw, 10rem)", paddingBottom: "clamp(2rem, 5vw, 4rem)", backgroundColor: "#0F1A25" }}>
         <div className="container-vivo">
           <p className="section-label mb-4">Life at Vivo</p>
           <h1
@@ -47,7 +47,7 @@ export default function AmenitiesPage() {
       </section>
 
       {/* Building Amenities */}
-      <section style={{ padding: "6rem 0" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0" }}>
         <div className="container-vivo">
           <div style={{ marginBottom: "4rem" }}>
             <p className="section-label mb-4">Building Features</p>
@@ -126,7 +126,7 @@ export default function AmenitiesPage() {
       </section>
 
       {/* In-Suite Features */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#F7F5F2" }}>
         <div className="container-vivo">
           <div style={{ marginBottom: "4rem" }}>
             <p className="section-label mb-4">In Your Suite</p>
@@ -182,7 +182,7 @@ export default function AmenitiesPage() {
       </section>
 
       {/* Lifestyle section */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#1C3144", color: "white" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#1C3144", color: "white" }}>
         <div className="container-vivo" style={{ maxWidth: "48rem", textAlign: "center", margin: "0 auto" }}>
           <p className="section-label mb-6">The Vivo Standard</p>
           <h2

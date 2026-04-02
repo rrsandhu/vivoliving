@@ -93,7 +93,7 @@ export default function RegisterPage() {
   return (
     <>
       {/* Header */}
-      <section style={{ paddingTop: "10rem", paddingBottom: "4rem", backgroundColor: "#0F1A25" }}>
+      <section style={{ paddingTop: "clamp(6rem, 12vw, 10rem)", paddingBottom: "clamp(2rem, 5vw, 4rem)", backgroundColor: "#0F1A25" }}>
         <div className="container-vivo">
           <p className="section-label mb-4">Opening Summer 2026</p>
           <h1
@@ -116,7 +116,7 @@ export default function RegisterPage() {
       </section>
 
       {/* Form section */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#F7F5F2" }}>
         <div className="container-vivo">
           <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem" }} className="lg:grid-cols-3-1">
             <div style={{ display: "grid", gap: "3rem" }} className="grid lg:grid-cols-[1fr_2fr]">
@@ -155,7 +155,7 @@ export default function RegisterPage() {
               </div>
 
               {/* Form */}
-              <div style={{ backgroundColor: "white", border: "1px solid #E5E1DB", padding: "2.5rem" }}>
+              <div style={{ backgroundColor: "white", border: "1px solid #E5E1DB", padding: "clamp(1.25rem, 4vw, 2.5rem)" }}>
                 <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "2rem", color: "#0F1A25", marginBottom: "0.5rem" }}>
                   Register Your Interest
                 </h2>
@@ -170,7 +170,7 @@ export default function RegisterPage() {
                 )}
 
                 <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label style={labelStyle}>Full Name *</label>
                       <input
@@ -201,7 +201,7 @@ export default function RegisterPage() {
                     </div>
                   </div>
 
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label style={labelStyle}>Phone</label>
                       <input
@@ -267,7 +267,7 @@ export default function RegisterPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="btn-primary"
+                    className="btn-primary w-full"
                     style={{ opacity: loading ? 0.6 : 1, cursor: loading ? "not-allowed" : "pointer" }}
                   >
                     {loading ? "Registering..." : "Register My Interest"}

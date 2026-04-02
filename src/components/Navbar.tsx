@@ -154,7 +154,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div style={{ backgroundColor: "#0F1A25", color: "white" }}>
-          <nav className="container-vivo py-8 flex flex-col gap-6">
+          <nav className="container-vivo py-8 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -168,6 +168,9 @@ export default function Navbar() {
                   textDecoration: "none",
                   color: "rgba(255,255,255,0.8)",
                   transition: "color 0.2s",
+                  minHeight: "44px",
+                  display: "flex",
+                  alignItems: "center",
                 }}
                 onClick={() => setMenuOpen(false)}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A96E")}
@@ -180,8 +183,8 @@ export default function Navbar() {
             ))}
             <Link
               href="/register"
-              className="btn-primary self-start mt-2"
-              style={{ fontSize: "0.75rem", padding: "0.75rem 1.5rem" }}
+              className="btn-primary mt-4"
+              style={{ fontSize: "0.75rem", padding: "0.75rem 1.5rem", width: "100%", justifyContent: "center" }}
               onClick={() => setMenuOpen(false)}
             >
               Register Now

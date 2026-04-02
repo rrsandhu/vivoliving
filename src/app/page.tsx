@@ -77,7 +77,7 @@ export default function HomePage() {
 
         <div
           className="container-vivo"
-          style={{ position: "relative", paddingBottom: "6rem", paddingTop: "10rem", width: "100%" }}
+          style={{ position: "relative", paddingBottom: "clamp(3rem, 6vw, 6rem)", paddingTop: "clamp(6rem, 12vw, 10rem)", width: "100%" }}
         >
           <p className="section-label mb-6">Now Leasing</p>
           <h1
@@ -99,7 +99,7 @@ export default function HomePage() {
           <p
             style={{
               color: "rgba(255,255,255,0.7)",
-              fontSize: "1.25rem",
+              fontSize: "clamp(1rem, 3vw, 1.25rem)",
               maxWidth: "32rem",
               marginBottom: "1rem",
               lineHeight: 1.75,
@@ -210,9 +210,9 @@ export default function HomePage() {
       </section>
 
       {/* Introduction */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#F7F5F2" }}>
         <div className="container-vivo">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="section-label mb-4">Welcome to Vivo</p>
               <h2 className="section-title mb-6">
@@ -288,7 +288,7 @@ export default function HomePage() {
       </section>
 
       {/* Unit types */}
-      <section style={{ padding: "6rem 0" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0" }}>
         <div className="container-vivo">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <p className="section-label mb-4">Find Your Home</p>
@@ -298,7 +298,7 @@ export default function HomePage() {
               rental homes.
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {unitTypes.map((u) => (
               <div
                 key={u.type}
@@ -368,7 +368,7 @@ export default function HomePage() {
       </section>
 
       {/* Amenities preview */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#F7F5F2" }}>
         <div className="container-vivo">
           <div
             style={{
@@ -452,13 +452,13 @@ export default function HomePage() {
       {/* Neighbourhood preview */}
       <section
         style={{
-          padding: "6rem 0",
+          padding: "clamp(3rem, 8vw, 6rem) 0",
           backgroundColor: "#1C3144",
           color: "white",
         }}
       >
         <div className="container-vivo">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="section-label mb-4">Location</p>
               <h2
@@ -534,7 +534,7 @@ export default function HomePage() {
               </Link>
             </div>
             {/* Google Maps embed */}
-            <div style={{ aspectRatio: "1", overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)" }}>
+            <div style={{ aspectRatio: "1", minHeight: "300px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)" }}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.4!2d-122.8468!3d49.1876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9b2a3b1e2c1%3A0x0!2s13255+104+Ave%2C+Surrey%2C+BC!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca&q=13255+104+Ave,+Surrey,+BC"
                 width="100%"
@@ -553,7 +553,7 @@ export default function HomePage() {
       {/* Gallery teaser — hidden until gallery is ready */}
 
       {/* Quote/lifestyle section */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#F7F5F2" }}>
         <div
           className="container-vivo"
           style={{ maxWidth: "48rem", textAlign: "center" }}

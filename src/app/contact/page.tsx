@@ -102,7 +102,7 @@ function ContactForm() {
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
       {/* Form type toggle */}
-      <div style={{ display: "flex", gap: "0.5rem" }}>
+      <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
         {["inquiry", "tour"].map((t) => (
           <button
             key={t}
@@ -237,9 +237,8 @@ function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="btn-primary"
+        className="btn-primary w-full sm:w-auto sm:self-start"
         style={{
-          alignSelf: "flex-start",
           opacity: loading ? 0.6 : 1,
           cursor: loading ? "not-allowed" : "pointer",
         }}
@@ -258,7 +257,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section style={{ paddingTop: "10rem", paddingBottom: "4rem", backgroundColor: "#0F1A25" }}>
+      <section style={{ paddingTop: "clamp(6rem, 12vw, 10rem)", paddingBottom: "clamp(2rem, 5vw, 4rem)", backgroundColor: "#0F1A25" }}>
         <div className="container-vivo">
           <p className="section-label mb-4">Get in Touch</p>
           <h1
@@ -282,7 +281,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main content */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#F7F5F2" }}>
         <div className="container-vivo">
           <div className="grid lg:grid-cols-3 gap-16">
             {/* Sidebar */}
@@ -341,7 +340,7 @@ export default function ContactPage() {
               </div>
 
               {/* Google Maps embed */}
-              <div style={{ aspectRatio: "1", overflow: "hidden", border: "1px solid #E5E1DB" }}>
+              <div style={{ aspectRatio: "1", minHeight: "250px", overflow: "hidden", border: "1px solid #E5E1DB" }}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.4!2d-122.8468!3d49.1876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9b2a3b1e2c1%3A0x0!2s13255+104+Ave%2C+Surrey%2C+BC!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca&q=13255+104+Ave,+Surrey,+BC"
                   width="100%"
@@ -361,7 +360,7 @@ export default function ContactPage() {
               style={{
                 backgroundColor: "white",
                 border: "1px solid #E5E1DB",
-                padding: "2.5rem",
+                padding: "clamp(1.25rem, 4vw, 2.5rem)",
               }}
             >
               <h2

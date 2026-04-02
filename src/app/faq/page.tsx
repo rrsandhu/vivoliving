@@ -10,7 +10,7 @@ export default function FAQPage() {
 
   return (
     <>
-      <section style={{ paddingTop: "10rem", paddingBottom: "4rem", backgroundColor: "#0F1A25" }}>
+      <section style={{ paddingTop: "clamp(6rem, 12vw, 10rem)", paddingBottom: "clamp(2rem, 5vw, 4rem)", backgroundColor: "#0F1A25" }}>
         <div className="container-vivo">
           <p className="section-label mb-4">Questions</p>
           <h1
@@ -33,7 +33,7 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#F7F5F2" }}>
         <div className="container-vivo" style={{ maxWidth: "48rem", margin: "0 auto" }}>
           <div
             style={{

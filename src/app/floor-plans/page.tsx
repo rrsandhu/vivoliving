@@ -18,7 +18,7 @@ export default function FloorPlansPage() {
   return (
     <>
       {/* Page header */}
-      <section style={{ paddingTop: "10rem", paddingBottom: "4rem", backgroundColor: "#0F1A25" }}>
+      <section style={{ paddingTop: "clamp(6rem, 12vw, 10rem)", paddingBottom: "clamp(2rem, 5vw, 4rem)", backgroundColor: "#0F1A25" }}>
         <div className="container-vivo">
           <p className="section-label mb-4">Browse Suites</p>
           <h1
@@ -83,7 +83,7 @@ export default function FloorPlansPage() {
       {/* Grid */}
       <section
         style={{
-          padding: "4rem 0",
+          padding: "clamp(2rem, 5vw, 4rem) 0",
           backgroundColor: "#F7F5F2",
           minHeight: "60vh",
         }}

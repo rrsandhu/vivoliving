@@ -15,7 +15,7 @@ export default function NeighbourhoodPage() {
   return (
     <>
       {/* Header */}
-      <section style={{ paddingTop: "10rem", paddingBottom: "4rem", backgroundColor: "#0F1A25" }}>
+      <section style={{ paddingTop: "clamp(6rem, 12vw, 10rem)", paddingBottom: "clamp(2rem, 5vw, 4rem)", backgroundColor: "#0F1A25" }}>
         <div className="container-vivo">
           <p className="section-label mb-4">Where You&apos;ll Live</p>
           <h1
@@ -39,8 +39,8 @@ export default function NeighbourhoodPage() {
       </section>
 
       {/* Intro */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
-        <div className="container-vivo grid lg:grid-cols-2 gap-16 items-center">
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#F7F5F2" }}>
+        <div className="container-vivo grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="section-label mb-4">The Neighbourhood</p>
             <h2 className="section-title mb-6">
@@ -60,7 +60,7 @@ export default function NeighbourhoodPage() {
             </p>
           </div>
           {/* Google Maps embed */}
-          <div style={{ aspectRatio: "1", overflow: "hidden", border: "1px solid #E5E1DB" }}>
+          <div style={{ aspectRatio: "1", minHeight: "300px", overflow: "hidden", border: "1px solid #E5E1DB" }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.4!2d-122.8468!3d49.1876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9b2a3b1e2c1%3A0x0!2s13255+104+Ave%2C+Surrey%2C+BC!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca&q=13255+104+Ave,+Surrey,+BC"
               width="100%"
@@ -76,7 +76,7 @@ export default function NeighbourhoodPage() {
       </section>
 
       {/* Highlights */}
-      <section style={{ padding: "6rem 0" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0" }}>
         <div className="container-vivo">
           <div style={{ textAlign: "center", marginBottom: "4rem" }}>
             <p className="section-label mb-4">Nearby</p>
@@ -145,7 +145,7 @@ export default function NeighbourhoodPage() {
       </section>
 
       {/* Transit callout */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#1C3144", color: "white" }}>
+      <section style={{ padding: "clamp(3rem, 8vw, 6rem) 0", backgroundColor: "#1C3144", color: "white" }}>
         <div className="container-vivo grid md:grid-cols-3 gap-12 text-center">
           {[
             { value: "5 min", label: "Walk to Central City SkyTrain" },
@@ -156,7 +156,7 @@ export default function NeighbourhoodPage() {
               <p
                 style={{
                   fontFamily: "var(--font-cormorant), Georgia, serif",
-                  fontSize: "3rem",
+                  fontSize: "clamp(2rem, 6vw, 3rem)",
                   fontWeight: 300,
                   color: "#C9A96E",
                   marginBottom: "0.75rem",
