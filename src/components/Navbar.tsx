@@ -8,7 +8,6 @@ const navLinks: { href: string; label: string; highlight?: boolean }[] = [
   { href: "/", label: "Home" },
   { href: "/floor-plans", label: "Floor Plans" },
   { href: "/amenities", label: "Amenities" },
-  { href: "/gallery", label: "Gallery" },
   { href: "/neighbourhood", label: "Neighbourhood" },
   { href: "/contact", label: "Contact" },
 ];

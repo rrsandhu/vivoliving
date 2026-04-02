@@ -550,64 +550,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Gallery teaser */}
-      <section style={{ padding: "6rem 0" }}>
-        <div className="container-vivo">
-          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-            <p className="section-label mb-4">Gallery</p>
-            <h2 className="section-title">See yourself at home.</h2>
-          </div>
-          {/* Gallery grid placeholder */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              gap: "0.75rem",
-              marginBottom: "2rem",
-            }}
-            className="md:grid-cols-3"
-          >
-            {[...Array(6)].map((_, i) => (
-              <div
-                key={i}
-                style={{
-                  backgroundColor: "#F7F5F2",
-                  border: "1px solid #E5E1DB",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  aspectRatio: i === 0 ? "auto" : "1",
-                  minHeight: i === 0 ? "300px" : undefined,
-                  gridRow: i === 0 ? "span 2" : undefined,
-                }}
-              >
-                <div
-                  style={{
-                    textAlign: "center",
-                    color: "rgba(107,114,128,0.4)",
-                    padding: "1rem",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontFamily: "var(--font-cormorant), Georgia, serif",
-                      fontSize: "1.125rem",
-                    }}
-                  >
-                    Image {i + 1}
-                  </p>
-                  <p style={{ fontSize: "0.75rem" }}>Replace with photo</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <Link href="/gallery" className="btn-outline-dark">
-              View Full Gallery
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Gallery teaser — hidden until gallery is ready */}
 
       {/* Quote/lifestyle section */}
       <section style={{ padding: "6rem 0", backgroundColor: "#F7F5F2" }}>
