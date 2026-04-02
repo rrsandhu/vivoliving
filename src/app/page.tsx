@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { siteConfig, floorPlans, amenities } from "@/lib/data";
+import { siteConfig, amenities } from "@/lib/data";
 import CTABanner from "@/components/CTABanner";
 
 const stats = [
   { value: "115", label: "Rental Homes" },
   { value: "1–3", label: "Bedroom Options" },
-  { value: "14", label: "Stories" },
+  { value: "13", label: "Stories" },
   { value: "Steps", label: "to SkyTrain" },
 ];
 
