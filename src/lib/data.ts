@@ -5,7 +5,7 @@ export const siteConfig = {
   address: "13255 104 Ave, Surrey, BC",
   city: "Surrey, BC",
   postalCode: "V3T 0H6",
-  phone: "(604) 555-0182",
+  phone: "604-817-5540",
   email: "leasing@vivoliving.ca",
   leasingHours: [
     { days: "Monday – Friday", hours: "9:00 AM – 6:00 PM" },
@@ -493,7 +493,7 @@ export const faqs = [
   {
     question: "How do I book a tour?",
     answer:
-      "You can book a tour online through our Contact page, call us at (604) 555-0182, or email leasing@vivoliving.ca. Our leasing team is available Monday–Friday 9AM–6PM, Saturday 10AM–5PM, and Sunday by appointment.",
+      "You can book a tour online through our Contact page, call us at 604-817-5540, or email leasing@vivoliving.ca. Our leasing team is available Monday–Friday 9AM–6PM, Saturday 10AM–5PM, and Sunday by appointment.",
   },
   {
     question: "What is included in the rent?",
